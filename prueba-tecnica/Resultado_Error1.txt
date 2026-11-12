@@ -1,0 +1,177 @@
+PS C:\Workspaces\eclipse\prueba-tecnica> docker logs ms-productos-java21
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-12T18:59:57.788Z  INFO 1 --- [backend-productos] [           main] c.p.m.BackendProductosApplication        : Starting BackendProductosApplication v0.0.1-SNAPSHOT using Java 21.0.13 with PID 1 (/app/app.jar started by root in /app)
+2026-11-12T18:59:57.801Z  INFO 1 --- [backend-productos] [           main] c.p.m.BackendProductosApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-11-12T19:00:03.132Z  INFO 1 --- [backend-productos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-12T19:00:03.260Z  INFO 1 --- [backend-productos] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interface.
+2026-11-12T19:00:05.355Z  INFO 1 --- [backend-productos] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-12T19:00:05.406Z  INFO 1 --- [backend-productos] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-12T19:00:05.407Z  INFO 1 --- [backend-productos] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-12T19:00:05.542Z  INFO 1 --- [backend-productos] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 6573 ms
+2026-11-12T19:00:06.495Z  INFO 1 --- [backend-productos] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-12T19:00:06.691Z  INFO 1 --- [backend-productos] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-12T19:00:08.170Z  INFO 1 --- [backend-productos] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-12T19:00:08.262Z  INFO 1 --- [backend-productos] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-12T19:00:09.777Z  WARN 1 --- [backend-productos] [           main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 12514, SQLState: 08006
+2026-11-12T19:00:09.778Z  WARN 1 --- [backend-productos] [           main] org.hibernate.orm.jdbc.error             : ORA-12514: Cannot connect to database. Service XEPDB1 is not registered with the listener at host oracle-db port 1521. (CONNECTION_ID=fCioSDJ4SnSku/Sr6b7sXQ==)
+https://docs.oracle.com/error-help/db/ora-12514/
+2026-11-12T19:00:09.779Z  WARN 1 --- [backend-productos] [           main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.JDBCConnectionException: Unable to obtain isolated JDBC connection [ORA-12514: Cannot connect to database. Service XEPDB1 is not registered with the listener at host oracle-db port 1521. (CONNECTION_ID=fCioSDJ4SnSku/Sr6b7sXQ==)
+https://docs.oracle.com/error-help/db/ora-12514/] [n/a]
+        at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:80) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:180) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1388) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1468) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1450) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.10.jar!/:7.0.10]
+        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar!/:7.0.10]
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:131) ~[spring-boot-web-server-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at com.prueba.microservicio.BackendProductosApplication.main(BackendProductosApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+        at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:94) ~[app.jar:0.0.1-SNAPSHOT]
+        at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:52) ~[app.jar:0.0.1-SNAPSHOT]
+        at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:28) ~[app.jar:0.0.1-SNAPSHOT]
+Caused by: java.sql.SQLRecoverableException: ORA-12514: Cannot connect to database. Service XEPDB1 is not registered with the listener at host oracle-db port 1521. (CONNECTION_ID=fCioSDJ4SnSku/Sr6b7sXQ==)
+https://docs.oracle.com/error-help/db/ora-12514/
+        at oracle.jdbc.driver.T4CConnection.handleLogonNetException(T4CConnection.java:2088) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1319) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:1250) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:107) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:817) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:720) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar!/:na]
+        at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar!/:na]
+        at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar!/:na]
+        at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar!/:na]
+        at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar!/:na]
+        at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar!/:na]
+        at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar!/:na]
+        at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:149) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        ... 42 common frames omitted
+Caused by: oracle.net.ns.NetException: ORA-12514: Cannot connect to database. Service XEPDB1 is not registered with the listener at host oracle-db port 1521. (CONNECTION_ID=fCioSDJ4SnSku/Sr6b7sXQ==)
+https://docs.oracle.com/error-help/db/ora-12514/
+        at oracle.net.ns.NSProtocolNIO.createRefusePacketException(NSProtocolNIO.java:960) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.net.ns.NSProtocolNIO.handleConnectPacketResponse(NSProtocolNIO.java:499) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.net.ns.NSProtocolNIO.negotiateConnection(NSProtocolNIO.java:289) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.net.ns.NSProtocol.connect(NSProtocol.java:374) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.jdbc.driver.T4CConnection.connectNetworkSessionProtocol(T4CConnection.java:3998) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:1201) ~[ojdbc17-23.26.3.0.0.jar!/:23.26.3.0.0]
+        ... 56 common frames omitted
+
+2026-11-12T19:00:09.788Z ERROR 1 --- [backend-productos] [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-11-12T19:00:09.790Z  WARN 1 --- [backend-productos] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-11-12T19:00:09.798Z  INFO 1 --- [backend-productos] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-11-12T19:00:09.821Z  INFO 1 --- [backend-productos] [           main] .s.b.a.l.ConditionEvaluationReportLogger :
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-12T19:00:09.870Z ERROR 1 --- [backend-productos] [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.10.jar!/:7.0.10]
+        at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.10.jar!/:7.0.10]
+        at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:131) ~[spring-boot-web-server-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:433) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:309) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at org.springframework.boot.SpringApplication.run(SpringApplication.java:1342) ~[spring-boot-4.1.2.jar!/:4.1.2]
+        at com.prueba.microservicio.BackendProductosApplication.main(BackendProductosApplication.java:10) ~[!/:0.0.1-SNAPSHOT]
+        at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
+        at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+        at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:94) ~[app.jar:0.0.1-SNAPSHOT]
+        at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:52) ~[app.jar:0.0.1-SNAPSHOT]
+        at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:28) ~[app.jar:0.0.1-SNAPSHOT]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:180) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1388) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1468) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1450) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811) ~[spring-beans-7.0.10.jar!/:7.0.10]
+        ... 20 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+        at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.4.13.Final.jar!/:7.4.13.Final]
+        ... 36 common frames omitted
+
+PS C:\Workspaces\eclipse\prueba-tecnica> netstat -ano | findstr ":8080 :5000 :5001"
+  TCP    0.0.0.0:5000           0.0.0.0:0              LISTENING       16848
+  TCP    0.0.0.0:5001           0.0.0.0:0              LISTENING       16848
+  TCP    [::]:5000              [::]:0                 LISTENING       16612
+  TCP    [::]:5000              [::]:0                 LISTENING       16848
+  TCP    [::]:5001              [::]:0                 LISTENING       16612
+  TCP    [::]:5001              [::]:0                 LISTENING       16848
+  TCP    [::1]:5000             [::]:0                 LISTENING       16612
+  TCP    [::1]:5001             [::]:0                 LISTENING       16612
+PS C:\Workspaces\eclipse\prueba-tecnica>

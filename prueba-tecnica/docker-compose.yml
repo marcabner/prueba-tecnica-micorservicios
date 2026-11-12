@@ -1,0 +1,47 @@
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe:21-slim
+    container_name: oracle-prueba
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: AdminPassword123
+      APP_USER: app_user
+      APP_USER_PASSWORD: AppPassword123
+    volumes:
+      - ./init.sql:/container-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "echo 'SELECT 1 FROM DUAL;' | sqlplus -s app_user/AppPassword123@//localhost:1521/XEPDB1 | grep -q 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 40s
+
+  backend-productos:
+    build: ./backend-productos
+    container_name: ms-productos-java21
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:oracle:thin:@oracle-db:1521/XEPDB1
+      SPRING_DATASOURCE_USERNAME: app_user
+      SPRING_DATASOURCE_PASSWORD: AppPassword123
+    depends_on:
+      oracle-db:
+        condition: service_healthy
+
+  mfe-productos:
+    build: ./mfe-productos
+    container_name: mfe-productos
+    ports:
+      - "5001:80"
+    depends_on:
+      - backend-productos
+
+  host-shell:
+    build: ./host-shell
+    container_name: host-shell
+    ports:
+      - "5000:80"
+    depends_on:
+      - mfe-productos

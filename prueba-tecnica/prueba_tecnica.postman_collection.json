@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "Prueba Técnica - Productos API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Productos (Ordenados por Fecha)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/v1/productos"
+      }
+    },
+    {
+      "name": "Crear Producto",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Teclado Mecánico\",\n  \"descripcion\": \"Switch táctil español\",\n  \"precio\": 1850.00,\n  \"activo\": 1\n}"
+        },
+        "url": "http://localhost:8080/api/v1/productos"
+      }
+    },
+    {
+      "name": "Actualizar Producto",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Teclado Mecánico RGB\",\n  \"descripcion\": \"Switch táctil actualizado\",\n  \"precio\": 2100.00,\n  \"activo\": 1\n}"
+        },
+        "url": "http://localhost:8080/api/v1/productos/1"
+      }
+    },
+    {
+      "name": "Eliminar Producto",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:8080/api/v1/productos/1"
+      }
+    }
+  ]
+}
